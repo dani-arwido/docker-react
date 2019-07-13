@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t daniarwido/docker-react -f dev.dockerfile .
+  - docker build -t daniarwido/docker-react -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true daniarwido/docker-react npm run test
